@@ -10,13 +10,13 @@ This is a dark theme for Brackets. It is a modern spin on the legacy computer sc
 * Click `Install`
 
 ## HTML
-![HTML Screenshot](https://github.com/Mr-Skribbls/BracketsTheme.modern.legacy/blob/master/images/modern.legacy.html.png)
+![HTML Screenshot](https://github.com/Mr-Skribbls/BracketsTheme.modern.legacy/blob/master/images/modern.legacy.html1.png)
 
 ## PHP
-![PHP Screenshot](https://github.com/Mr-Skribbls/BracketsTheme.modern.legacy/blob/master/images/modern.legacy.php.png)
+![PHP Screenshot](https://github.com/Mr-Skribbls/BracketsTheme.modern.legacy/blob/master/images/modern.legacy.php1.png)
 
 ## CSS / LESS
-![CSS Screenshot](https://github.com/Mr-Skribbls/BracketsTheme.modern.legacy/blob/master/images/modern.legacy.css.png)
+![CSS Screenshot](https://github.com/Mr-Skribbls/BracketsTheme.modern.legacy/blob/master/images/modern.legacy.less_css.png)
 
 ## JavaScript
-![JS Screenshot](https://github.com/Mr-Skribbls/BracketsTheme.modern.legacy/blob/master/images/modern.legacy.js.png)
+![JS Screenshot](https://github.com/Mr-Skribbls/BracketsTheme.modern.legacy/blob/master/images/modern.legacy.js1.png)
