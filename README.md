@@ -5,6 +5,7 @@ This is a dark theme for Brackets. It is a modern spin on the legacy computer sc
 
 **Installation**
 
+* In Brackets
 * Go to `File > Extension Manager`
 * Search for `Modern Legacy`
 * Click `Install`
