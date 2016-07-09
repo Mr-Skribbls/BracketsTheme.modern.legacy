@@ -2,7 +2,6 @@ Modern Legacy Theme for Brackets
 ===========================
 This is a dark theme for Brackets. It is a modern spin on the legacy computer screen.
 
-**[Official Brackets Registry]()**
 
 **Installation**
 
