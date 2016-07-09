@@ -1,0 +1,19 @@
+{
+    "name": "Modern Legacy",
+    "title": "Modern Legacy",
+    "description": "A modern spin on the legacy computer screen",
+    "homepage": "",
+    "version": "1.0.0",
+    "author": "Mr-Skribbls",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.42.0",
+        "brackets": ">=1.3.0"
+    },
+    "theme": {
+        "file": "theme.less",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": ["legacy, old, modern"]
+}

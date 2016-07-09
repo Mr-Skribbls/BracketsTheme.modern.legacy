@@ -1,0 +1,227 @@
+@bg: black;
+@fg: green;
+@fg-light: greenyellow;
+@tag-color: darkcyan;
+@comment: #5f5f5f;
+
+
+// +++++ Code Window +++++ //
+.CodeMirror, .CodeMirror .CodeMirror-scroll {
+    background: @bg; 
+    color: @fg;
+    font-weight: normal;
+}
+
+
+// +++++ Cursor +++++ //
+// - insert cursor
+.CodeMirror-cursor { border-left: 1px solid red; }
+// - overwrite cursor
+.CodeMirror .CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none; 
+    border-bottom: 1px solid red;
+}
+
+
+// +++++ Line Number Gutter +++++ //
+.CodeMirror .CodeMirror-scroll .CodeMirror-gutters{
+    background:@bg; 
+    border-right: 3px double @fg;
+}
+// - line numbers
+.CodeMirror .CodeMirror-linenumber {
+    padding: 0px; 
+    color: @fg;
+}
+
+
+// +++++ Styles +++++ //
+.cm-atom, .cm-link{color: @fg;} /*Attribute value ex. #f00 in color:#f00; Link;*/
+.cm-def{color: orange;} /*variable definition*/
+.cm-number{ color: cyan; } /*Numbers*/
+.cm-variable{color: @fg;} /*Variable name ex. class Variable_name */
+.cm-variable-2{color: gold;} /*Variable declaration ex. $variable */
+.cm-variable-3{color: @fg;}
+.cm-property{color: blue;} /*Property ex. color in color:#f00;*/
+.cm-operator{color: red;} /*Operators ex. dots (:) between property and atom value */
+.cm-comment{color:@comment} /*Comment*/
+.cm-string{color:@fg-light;} /*String elements ex. "description" in name="description" - including quotation*/
+.cm-meta{color: @fg; } /*Meta elements like ex.: <!DOCTYPE html>*/
+.cm-qualifier{
+    color:@fg;
+    font-size: 0.8em;
+} /*Final qualifier like css class ex.: .cm-qualifier*/
+.cm-builtin{
+    color:@fg; 
+    font-weight: normal;
+} /*Final qualifier like css id ex.: #context-menu-bar*/
+.cm-tag{
+    color:@tag-color;
+    font-size: 0.8em;
+} /*Tags ex. ul or <ul>*/
+.cm-attribute{color:@fg} /*Attribute ex. rel, href, name*/
+.cm-keyword {color:darkcyan;} /*Element call ex. array, class, public function, if, elseif, !important*/
+.cm-matchingtag{background-color:@fg ;}
+.cm-error{ 
+    font-style: italic; 
+    border-bottom: 2px dotted @fg; 
+}
+.cm-header{
+    color: @fg; 
+    font-weight: normal;
+} /*Element in md file ex. # title*/
+.cm-attribute{color: @fg; } /*class in file md*/
+
+
+// +++++ User Interactions +++++ //
+// - highlighting
+.CodeMirror-selected{
+    background-color: red !important;
+    opacity: 0.4;
+    border: 1px solid @fg; 
+}
+// - active line
+.CodeMirror-activeline-background{
+    background:rgba(0,100,0,0.5) !important;
+    border-bottom: 1px solid @fg; 
+    border-top: 1px solid @fg;
+    opacity: 0.45;
+}
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    color: @fg-light;
+    background-color: transparent !important;
+}
+// - matching tags
+.CodeMirror-matchingtag{
+    background:none; 
+    font-weight: normal; 
+    color: red !important;
+    -webkit-animation: colorChangeMT 2s alternate ease-in-out infinite;
+}
+@-webkit-keyframes colorChangeMT {
+    0% {
+        color: red;
+    }
+    100% {
+        color: yellow;
+    }
+}
+// - matching brackets
+.CodeMirror-matchingbracket {
+    color: red;
+    font-weight: bolder;
+    -webkit-animation: blinkMB 4s alternate ease-in-out infinite;
+}
+@-webkit-keyframes blinkMB {
+    0% {
+        color: red;
+        background-color: @fg;
+        font-weight: bold;
+    }
+    50% {
+        color: @fg;
+        background-color: transparent;
+        font-weight: normal;
+    }
+    100% {
+        color: red;
+        background-color: @fg;
+        font-weight: bold;
+    }
+}
+// - close X
+.close {
+    color: @fg !important; 
+    opacity: 0.7; 
+}
+.close:hover { opacity: 1; }
+
+
+// +++++ Inline editor(Ex. Quick Edit - Ctrl + E) +++++ //
+.CodeMirror .inline-widget{
+    background: @bg; color: @fg;
+    border-top: 2px solid @fg;
+    border-bottom: 2px solid @fg;
+}
+
+
+// +++++ Quick Documentation (Ctrl + K) +++++ //
+.inline-widget .css-prop-defn { color: @fg!important;  }
+.inline-widget .css-prop-defn h1 { color: @fg !important; }
+.inline-widget .css-prop-defn dt { color: @fg !important; }
+.inline-widget .css-prop-defn b { color: @fg !important; }
+.inline-widget .css-prop-defn code { color: @fg !important; }
+.inline-widget .css-prop-defn .divider-holder.no-focus .divider { border-color: @fg; }
+
+
+// +++++ Scrollbars +++++ //
+/* you have to reopen brackets for these to take effect */
+// - scrollbar track
+::-webkit-scrollbar-track {  
+    background-color: @bg;
+}
+// - horizontal bar
+.CodeMirror .CodeMirror-hscrollbar{ 
+    height: 12px; 
+    right: 11px !important;
+}
+// - vertical bar
+.CodeMirror-vscrollbar{
+    bottom: 11px !important; 
+    top: 11px;
+    /*border-right: thin solid @fg;*/
+}
+// - scrollbar
+#sidebar ::-webkit-scrollbar {
+    width: 5px !important; 
+    height: 5px !important;
+}
+.CodeMirror-scrollbar-filler {
+    height: 5px !important;
+    width: 5px !important; 
+    background: @bg;
+}
+/* Scroll object */
+::-webkit-scrollbar-thumb {
+    border: 1px solid @fg;
+}
+::-webkit-scrollbar-thumb:hover { border: 3px solid @fg; }
+::-webkit-scrollbar-thumb:active { border: 6px solid @fg; }
+
+
+// +++++ Code Folding +++++ //
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-blank,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded:after{
+    color: @fg;
+}
+.CodeMirror-foldgutter-open:after {
+    content: "\25bd"; 
+    color: @fg;
+}
+.CodeMirror-foldmarker {
+    background-color: @fg; 
+    border-color: @fg; 
+    color: @bg; 
+}
+
+
+// +++++ Searching +++++ //
+.CodeMirror-searching {
+    background-color: @fg; 
+    border-bottom: 2px solid @fg; 
+    font-weight: bold;
+    padding: 3px;
+}
+.searching-current-match {
+    background-color: lawngreen;
+    font-weight: bold;
+}
+.quick-view-highlight{
+    background-color: red;
+    color: @bg;
+    font-weight: bold;
+    border-bottom: 2px solid @fg; 
+}
